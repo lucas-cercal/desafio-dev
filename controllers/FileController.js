@@ -1,5 +1,7 @@
 const { readFile } = require('fs');
 const File = require('../models/File');
+
+// Helpers
 const { fileWrite } = require('../helpers/file-write')
 
 module.exports = class FileController {
@@ -18,6 +20,8 @@ module.exports = class FileController {
           return;
         }
 
+        // Transforma em string
+
         const dados = fileWrite(data);
         
         const array = dados.split(/\r?\n/);
@@ -34,6 +38,8 @@ module.exports = class FileController {
         var storename = [];
         var database = [];
 
+        // Extrai separadamente os dados
+
         for(var i=0; i < numberOfRows ; i++){
           type[i] = array[i].substr(0,1);
           date[i] = array[i].substr(1,8);
@@ -43,6 +49,8 @@ module.exports = class FileController {
           hour[i] = array[i].substr(42,6);
           storeowner[i] = array[i].substr(48,14);
           storename[i] = array[i].substr(62,19);
+
+            // Insere os dados formatados em um array
 
             database[i] = [
               type[i] = {
