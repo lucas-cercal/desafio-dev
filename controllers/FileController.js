@@ -47,24 +47,37 @@ module.exports = class FileController {
           hour[i] = array[i].substr(42,6);
           storeowner[i] = array[i].substr(48,14);
           storename[i] = array[i].substr(62,19);
+
+            database[i] = [
+              type[i] = {
+                'type': type[i]
+              },
+              date[i] = {
+                'date': date[i]
+              },
+              value[i] = {
+                'value': value[i]
+              },
+              cpf[i] = {
+                'cpf': cpf[i]
+              },
+              card[i] = {
+                'card': card[i]
+              },
+              hour[i] = {
+                'hour': hour[i]
+              },
+              storeowner[i] = {
+                'storeowner': storeowner[i]
+              },
+              storename[i] = {
+                'storename': storename[i]
+              },
+            ]; 
         }  
-        
-        database = [
-          type= type[1],
-          date= date[1],
-          value= value[1],
-          cpf= cpf[1],
-          card= card[1],
-          hour= hour[1],
-          storeowner= storeowner[1],
-          storename= storename[1]
-        ];
 
-        //console.log(numberOfRows);
-        //console.log(type);
-        //console.log(date);
         console.log(database);
-
+    
         return;
     })
   }
