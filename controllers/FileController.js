@@ -20,11 +20,7 @@ module.exports = class FileController {
 
         const dados = fileWrite(data);
         
-        //console.log(dados.substr(0, 1));
         const array = dados.split(/\r?\n/);
-
-        //console.log(dados);
-        //console.log(array.lenght);
 
         var numberOfRows = array.length;
 
@@ -77,7 +73,6 @@ module.exports = class FileController {
         }  
 
         console.log(database);
-    
         return;
     })
   }
